@@ -95,11 +95,11 @@ export default function Home() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="flex flex-col items-center gap-2"
+                className="flex flex-col items-center gap-1"
               >
                 <Typewriter text={image.title || "UNIDENTIFIED ANOMALY"} />
-                <p className="font-mono text-[9px] text-red-900/40 tracking-[0.3em] uppercase">
-                  ORIGIN: {image.source || "VOID"}
+                <p className="font-mono text-[7px] text-red-900/20 tracking-[0.3em] uppercase absolute bottom-4 right-4 opacity-50">
+                  {image.source || "VOID"}
                 </p>
               </motion.div>
             )}
@@ -109,15 +109,15 @@ export default function Home() {
 
       {/* UI Overlay */}
       <div 
-        className={`absolute inset-0 z-20 flex flex-col h-full w-full p-6 md:p-12 pointer-events-none transition-opacity duration-75 ${showUI ? 'opacity-100' : 'opacity-0'}`}
+        className={`absolute inset-0 z-20 flex flex-col h-full w-full p-6 pointer-events-none transition-opacity duration-75 ${showUI ? 'opacity-100' : 'opacity-0'}`}
       >
         {/* Header */}
         <header className="flex justify-between items-start animate-flicker w-full">
           <div>
             <GlitchText 
-              text="ARCHIVE.OBSCURA" 
+              text="q0pe" 
               as="h1" 
-              className="font-creepy text-2xl md:text-4xl text-red-900/60" 
+              className="font-mono text-xs text-red-900/40 tracking-tighter" 
             />
           </div>
           <div className="flex items-center gap-2 text-red-900/30 font-mono text-[10px] tracking-widest">
