@@ -5,11 +5,11 @@ import { api } from "@shared/routes";
 export async function registerRoutes(httpServer: Server, app: Express): Promise<Server> {
   app.get(api.images.random.path, async (req, res) => {
     try {
-      // A curated list of creepy/unsettling search terms for Wikimedia Commons
+      // A curated list of search terms for historical and unsettling imagery
       const terms = [
-        "vintage portrait", "gargoyle", "creepy doll", "catacombs", "skull", "victorian mourning",
-        "plague doctor", "creepy mask", "cemetery statue", "weird face", "ghost",
-        "abandoned asylum interior", "abandoned prison", "ruined building", "war ruins", "destroyed city"
+        "vintage mugshot", "19th century prisoner", "historical crime scene",
+        "abandoned asylum interior", "ruined building", "war ruins", "destroyed city",
+        "victorian mourning portrait", "historical medical oddity", "vintage police photo"
       ];
       const randomTerm = terms[Math.floor(Math.random() * terms.length)];
 
